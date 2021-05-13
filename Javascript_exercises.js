@@ -80,3 +80,38 @@ var bmi = bmiCalculator(65, 1.8);
 bmi should equal 20 when it's rounded to the nearest whole number.
 
 */
+
+//ES. 5: Build a random Love calculator
+prompt("What is your name?");
+prompt("What is their name?");
+var loveScore = Math.random();
+loveScore = Math.floor(loveScore*100) + 1; //1-100
+if (loveScore > 70) {
+    alert("Your match is " + loveScore + "%" + " You really love each other!");
+} else {
+    alert("Your match is " + loveScore + "%");
+}
+
+//ES. 6: Add interpretation to BMI Calculator
+function bmiCalculator (weight, height) {
+    var interpretation = Math.round((weight/Math.pow(height,2)));
+    if (interpretation < 18.5) {
+        interpretation = "Your BMI is " + interpretation + ", so you are underweight.";
+    } else if (18.5 <= interpretation && interpretation <= 24.9 ) {
+        interpretation = "Your BMI is " + interpretation + ", so you have a normal weight.";
+    } else if (24.9 < interpretation) {
+        interpretation = "Your BMI is " + interpretation + ", so you are overweight.";
+    }
+    return interpretation;
+}
+bmiCalculator(60,2);
+
+//ES. 7: Leap years verificator
+function isLeap(year) {
+    if (year%4 !== 0 || (year%4 === 0 && year%100 === 0 && year%400 !== 0)) {
+        return "Not leap year.";
+    }
+    else if ((year%4 === 0 && year%100 !== 0) || (year%4 === 0 && year%100 === 0 && year%400 === 0)) {
+        return "Leap year.";
+    }
+}
