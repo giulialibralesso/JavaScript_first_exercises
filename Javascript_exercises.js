@@ -115,3 +115,41 @@ function isLeap(year) {
         return "Leap year.";
     }
 }
+
+//ES. 8: Use arrays to verify if you are in the guest list or not
+var guestList = ["Anna", "Lucia", "Mike", "Gaia"];
+var name = prompt("What is your name?");
+if (guestList.includes(name)) {
+    alert("Welcome " + name.slice(0,1).toUpperCase() + name.slice(1,name.lenght).toLowerCase() + "!");
+} else {
+    alert("Sorry, maybe next time.");
+}
+
+//ES. 9: FizzBuzz
+var output = [];
+var count = 1;
+function fizzBuzz() {
+    output.push(count);
+    count++;
+    if (count%3 === 0 && count%5 === 0) {
+        output.push("FizzBuzz");
+        count++;
+    } else if (count%3 === 0) {
+       output.push("Fizz");
+       count++;
+    } else if (count%5 === 0) {
+        output.push("Buzz");
+        count++;
+    }
+    console.log(output);
+}
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
