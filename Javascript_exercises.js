@@ -1,6 +1,6 @@
-/*Esercizi JavaScript
+//Esercizi JavaScript
 
-ES. 1: Tell the dog age in human years.*/
+//ES. 1: Tell the dog age in human years.
 
 var dogAge = prompt("What's your dog age?");
 var humanAge = ((dogAge-2) * 4) + 21;
