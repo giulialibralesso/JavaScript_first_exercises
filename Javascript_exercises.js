@@ -1,7 +1,6 @@
 //Esercizi JavaScript
 
 //ES. 1: Tell the dog age in human years.
-
 var dogAge = prompt("What's your dog age?");
 var humanAge = ((dogAge-2) * 4) + 21;
 alert("Your dog human age is: " + humanAge);
@@ -17,7 +16,6 @@ alert("Your dog human age is: " + ((( prompt("What's your dog age?")-2) * 4) + 2
 
 
 //ES. 2: Greet the person with the first name letter capitalised.
-
 var name = prompt("What is your name?");
 var firstChar = name.slice(0,1);
 var upperChaseFirstChar = firstChar.toUpperCase();
@@ -32,7 +30,6 @@ var name = prompt("What is your name?" (alert("Hello, " + name.slice(0,1).toUppe
 
 
 //ES. 3: Assume you will live until 90 years old, and calculate how many days, weeks and months you have left.
-
 function lifeInWeeks(age) {
 
 /************Don't change the code above************/
@@ -64,7 +61,6 @@ lifeInWeeks(90);
 
 
 /*ES. 4: Calculate the Body Mass Index without calling the function.
-
 Create your function below this line.
 The first parameter should be the weight and the second should be the height.*/
 
@@ -153,3 +149,55 @@ fizzBuzz();
 fizzBuzz();
 fizzBuzz();
 fizzBuzz();
+
+//ES. 10: While loop applied to FizzBuzz
+var output = [];
+var count = 1;
+function fizzBuzz() {
+
+    while (count <= 100) {
+    if (count%3 === 0 && count%5 === 0) {
+        output.push("FizzBuzz");
+    } else if (count%3 === 0) {
+       output.push("Fizz");
+    } else if (count%5 === 0) {
+        output.push("Buzz");
+    } else {
+        output.push(count);
+    }
+    count++;
+    }
+    console.log(output);
+}
+
+//ES. 11: Random people selector from array list
+var names = ["Angela", "Ben", "Jenny", "Michael", "Chloe"];
+function whosPaying(names) {
+
+/******Don't change the code above*******/
+
+    //Write your code here.
+    var numberOfPeople = names.length;
+    var randomPersonPosition = Math.floor(Math.random() * numberOfPeople);
+    var randomPerson = names[randomPersonPosition];
+
+    return randomPerson + " is going to buy lunch today!";
+/******Don't change the code below*******/
+}
+
+//ES. 12: Bottles Of Beer Song: While + If
+var numberOfBottles = 5;
+var totalBottles = 5;
+function lyrics () {
+while (numberOfBottles > 0) {
+    if(numberOfBottles === 1) {
+    console.log(numberOfBottles + " bottle of beer bottles of beer on the wall, " + numberOfBottles + " bottle of beer. Take one down and pass it around, " + (numberOfBottles-1) + " bottles of beer on the wall.");
+    numberOfBottles--;
+    } else {
+    console.log(numberOfBottles + " bottles of beer bottles of beer on the wall, " + numberOfBottles + " bottles of beer. Take one down and pass it around, " + (numberOfBottles-1) + " bottles of beer on the wall.");
+    numberOfBottles--;
+    }
+}
+console.log("No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more," + prova + " bottles of beer on the wall.");
+}
+
