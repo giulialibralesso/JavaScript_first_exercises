@@ -198,6 +198,6 @@ while (numberOfBottles > 0) {
     numberOfBottles--;
     }
 }
-console.log("No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more," + prova + " bottles of beer on the wall.");
+console.log("No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more," + totalBottles + " bottles of beer on the wall.");
 }
 
