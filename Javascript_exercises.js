@@ -170,7 +170,25 @@ function fizzBuzz() {
     console.log(output);
 }
 
-//ES. 11: Random people selector from array list
+//ES. 11: For loop applied to FizzBuzz
+var output = [];
+function fizzBuzz() {
+
+    for (var count = 1; count < 101; count++) {
+    if (count%3 === 0 && count%5 === 0) {
+        output.push("FizzBuzz");
+    } else if (count%3 === 0) {
+       output.push("Fizz");
+    } else if (count%5 === 0) {
+        output.push("Buzz");
+    } else {
+        output.push(count);
+    }
+    }
+    console.log(output);
+}
+
+//ES. 12: Random people selector from array list
 var names = ["Angela", "Ben", "Jenny", "Michael", "Chloe"];
 function whosPaying(names) {
 
@@ -185,7 +203,7 @@ function whosPaying(names) {
 /******Don't change the code below*******/
 }
 
-//ES. 12: Bottles Of Beer Song: While + If
+//ES. 13: Bottles Of Beer Song: While + If
 var numberOfBottles = 5;
 var totalBottles = 5;
 function lyrics () {
@@ -201,3 +219,45 @@ while (numberOfBottles > 0) {
 console.log("No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more," + totalBottles + " bottles of beer on the wall.");
 }
 
+//ES. 14: Fibonacci function
+function fibonacciGenerator (n) {
+var output = [ ];
+    if (n > 0) {
+        if (n === 1) {
+            output = output.push(0);
+        } else if ( n === 2) {
+            output = output.push(0,1);
+        } else {
+        output = [0, 1];
+
+        for (var i = 2; i < n; i++) {
+            output.push(output[output.length-2] + output[output.length-1]);
+            }
+        }
+        return output;
+    }
+}
+output = fibonacciGenerator();
+console.log(output);
+
+//OPPURE:
+
+function fibonacciGenerator (n) {
+    var output = [ ];
+    if (n > 0) {
+        if (n === 1) {
+            output = [0];
+        } else if ( n === 2) {
+            output = [0, 1];
+        } else {
+        output = [0, 1];
+
+        for (var i = 2; i < n; i++) {
+            output.push(output[output.length-2] + output[output.length-1]);
+            }
+        }
+        return output;
+    }
+}
+output = fibonacciGenerator();
+console.log(output);
