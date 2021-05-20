@@ -7,4 +7,4 @@
 * Creating and calling functions
 * If/Else
 * Arrays + pop(), push()
-* While loops
+* While and For loops
