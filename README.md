@@ -8,3 +8,4 @@
 * If/Else
 * Arrays + pop(), push()
 * While and For loops
+* DOM
